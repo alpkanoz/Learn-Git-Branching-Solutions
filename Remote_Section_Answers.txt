@@ -1,0 +1,102 @@
+REMOTE
+
+Push & Pull -- Git Remotes!
+
+1.1 Clone Intro
+
+git clone
+
+1.2 Remote Branches
+
+git commit
+git checkout o/main; git commit
+
+1.3 Git Fetchin
+
+git fetch
+
+1.4 Git Pullin
+
+git pull
+
+1.5 Faking Teamwork
+
+git fakeTeamwork main 2 
+git commit
+git pull
+
+1.6 Git Pushin'
+
+git commit 
+git commit
+git push
+
+1.7 Diverged History
+
+git clone
+git fakeTeamwork 1 
+git commit
+git pull --rebase
+git push
+
+1.8 Locked Main
+
+git checkout -b feature C2
+git push
+git branch -f main o/main
+
+------------------------------------------------------------------------
+
+To Origin And Beyond -- Advanced Git Remotes!
+
+2.1 Push Main!
+
+git rebase side1 side2
+git rebase side2 side3
+git rebase side3 main
+git pull --rebase
+git push
+
+2.2 Merging with Remotes
+
+git checkout main
+git pull
+git merge side1
+git merge side2
+git merge side3
+git push
+
+2.3 Remote Tracking
+
+git checkout -b side o/main
+git commit
+git pull --rebase 
+git push
+
+2.4 Git push Arguments
+
+git push origin main
+git push origin foo
+
+2.5 Git push arguments -- Expanded!
+
+git push origin main^:foo
+git push origin foo:main
+
+2.6 Fetch Arguments
+
+git fetch origin foo:main
+git fetch origin main^:foo
+git checkout foo
+git merge main
+
+2.7 Source of Nothing
+
+git push origin :foo
+git fetch origin :bar
+
+2.8 Pull arguments
+
+git pull origin bar:foo
+git pull origin main:side
+
